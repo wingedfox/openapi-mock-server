@@ -1,8 +1,8 @@
-[![Build Status][travis_badge]][travis_link] [![js-standard-style][js_standard_badge]][js_standard_link]
+[![npm version][npm_badge]][npm_link] [![Build Status][travis_badge]][travis_link] [![downloads][npm_dl_badge]][npm_dl_link]  [![js-standard-style][js_standard_badge]][js_standard_link]
 
 # openapi-mock-server
 
-- creates mock server based on Open API 3.0 specification
+- *alpha version*. Creates mock server based on Open API 3.0 specification
 
 ## Install
 
@@ -26,3 +26,7 @@ OpenApiMock server listening on port 3000
 [js_standard_link]:  https://github.com/feross/standard
 [travis_badge]: https://travis-ci.org/unjello/openapi-mock-server.svg?branch=master
 [travis_link]:  https://travis-ci.org/unjello/openapi-mock-server
+[npm_badge]: https://img.shields.io/npm/v/openapi-mock-server.svg?style=flat-square
+[npm_link]:  https://npmjs.org/package/openapi-mock-server
+[npm_dl_badge]: http://img.shields.io/npm/dm/openapi-mock-server.svg?style=flat-square
+[npm_dl_link]: https://npmjs.org/package/openapi-mock-server
