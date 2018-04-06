@@ -1,0 +1,27 @@
+{
+  "name": "openapi-mock-server",
+  "version": "0.1.0",
+  "description": "Create mock server based on Open API 3.0 specification file ",
+  "main": "index.js",
+  "repository": "unjello/openapi-mock-server", 
+  "scripts": {
+    "test": "standard"
+  },
+  "keywords": [
+    "openapi3",
+    "oapi3",
+    "swagger",
+    "oasv3"
+  ],
+  "author": "Andrzej Lichnerowicz <andrzej@lichnerowicz.pl>",
+  "license": "Unlicense",
+  "dependencies": {
+    "express": "^4.16.3",
+    "get-port": "^3.2.0",
+    "mri": "^1.1.0",
+    "openapi-mockk": "^0.1.0"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1"
+  }
+}
