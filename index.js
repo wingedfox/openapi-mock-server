@@ -1,6 +1,6 @@
 const Port = require("get-port")
 const App = require("express")()
-const OpenApiMock = require("../openapi-mock")
+const OpenApiMock = require("openapi-mockk")
 const Opts = require('mri');
 
 const args = Opts(process.argv.slice(2))
