@@ -6,6 +6,8 @@
 
 ## Install
 
+Requires Node 8 or newer.
+
 ```bash
 $ pnpm i -g openapi-mock-server
 $
