@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "Create mock server based on Open API 3.0 specification file ",
   "main": "index.js",
-  "repository": "unjello/openapi-mock-server", 
+  "repository": "unjello/openapi-mock-server",
   "scripts": {
     "test": "standard"
   },
@@ -19,9 +19,11 @@
     "express": "^4.16.3",
     "get-port": "^3.2.0",
     "mri": "^1.1.0",
-    "openapi-mockk": "^0.1.0"
+    "openapi-mockk": "^0.1.0",
+    "pino": "^4.16.1"
   },
   "devDependencies": {
+    "pino-pretty-min": "^0.2.0",
     "standard": "^11.0.1"
   }
 }
