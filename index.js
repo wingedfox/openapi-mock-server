@@ -25,7 +25,7 @@ if (args.api) {
   })
 
   Port({port: 3000}).then(port => {
-    App.listen(port, () => Log.info( { port }, `server started`))
+    App.listen(port, () => Log.info({ port }, `server started`))
   })
 } else {
   Log.error('openapi specification file not found; use --api parameter')
