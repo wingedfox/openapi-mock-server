@@ -17,14 +17,13 @@
   "license": "Unlicense",
   "dependencies": {
     "args": "^3.0.8",
+    "chalk": "^2.3.2",
     "debug": "^3.1.0",
     "express": "^4.16.3",
     "get-port": "^3.2.0",
-    "openapi-mockk": "^0.1.0",
-    "pino": "^4.16.1"
+    "openapi-mockk": "^0.1.0"
   },
   "devDependencies": {
-    "pino-pretty-min": "^0.2.0",
     "standard": "^11.0.1"
   }
 }

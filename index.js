@@ -3,7 +3,7 @@ const App = require('express')()
 const OpenApiMock = require('openapi-mockk')
 const args = require('args')
 const debug = require('debug')('openapi-mock-server')
-const Log = require('pino')()
+const chalk = require('chalk')
 
 args.option(['a', 'api'], 'Path to OpenAPI specification file. JSON or YAML.')
 args.example('openapi-mock-server --api=petstore.yaml', 'To run a server serving examples from specification, simply point to a file')
@@ -39,7 +39,7 @@ if (opts.api) {
   })
 
   Port({port: 3000}).then(port => {
-    App.listen(port, () => Log.info({ port }, `server started`))
+    App.listen(port, () => console.log(chalk`{cyan openapi-mock-server: listening @ {underline http://localhost:${port}}}`))
   })
 } else {
   args.showHelp()
