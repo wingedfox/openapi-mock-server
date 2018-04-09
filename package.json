@@ -1,6 +1,6 @@
 {
   "name": "openapi-mock-server",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Create mock server based on Open API 3.0 specification file ",
   "main": "index.js",
   "repository": "unjello/openapi-mock-server",
