@@ -29,7 +29,7 @@ if (opts.api) {
     }).then(mock => {
       if (path in mock) {
         const response = mock[path][operation].responses
-        debug(`200: ${response}`)  
+        debug(`200: ${response}`)
         res.send(response)
       } else {
         debug(`404: path not found`)
