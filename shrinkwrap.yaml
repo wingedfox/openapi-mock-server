@@ -1,5 +1,6 @@
 dependencies:
   args: 3.0.8
+  debug: 3.1.0
   express: 4.16.3
   get-port: 3.2.0
   openapi-mockk: 0.1.0
@@ -2141,6 +2142,7 @@ shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
   args: ^3.0.8
+  debug: ^3.1.0
   express: ^4.16.3
   get-port: ^3.2.0
   openapi-mockk: ^0.1.0
