@@ -1,18 +1,20 @@
 const Port = require('get-port')
 const App = require('express')()
 const OpenApiMock = require('openapi-mockk')
-const Opts = require('mri')
+const args = require('args')
 const Log = require('pino')()
 
-const args = Opts(process.argv.slice(2))
+args.option(['a', 'api'], 'Path to OpenAPI specification file. JSON or YAML.')
+args.example('openapi-mock-server --api=petstore.yaml', 'To run a server serving examples from specification, simply point to a file')
+const opts = args.parse(process.argv)
 
-if (args.api) {
+if (opts.api) {
   App.all('*', (req, res, next) => {
     const content = req.headers['content-type'] || 'application/json'
     const path = req.path
     const operation = req.method.toLowerCase()
     Log.trace({path, method: operation, content_type: content}, 'http request')
-    OpenApiMock(args.api).responses({
+    OpenApiMock(opts.api).responses({
       path,
       operation,
       response: '200',
@@ -28,5 +30,5 @@ if (args.api) {
     App.listen(port, () => Log.info({ port }, `server started`))
   })
 } else {
-  Log.error('openapi specification file not found; use --api parameter')
+  args.showHelp()
 }

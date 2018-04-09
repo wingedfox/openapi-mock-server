@@ -16,9 +16,9 @@
   "author": "Andrzej Lichnerowicz <andrzej@lichnerowicz.pl>",
   "license": "Unlicense",
   "dependencies": {
+    "args": "^3.0.8",
     "express": "^4.16.3",
     "get-port": "^3.2.0",
-    "mri": "^1.1.0",
     "openapi-mockk": "^0.1.0",
     "pino": "^4.16.1"
   },
