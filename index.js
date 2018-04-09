@@ -8,13 +8,15 @@ args.option(['a', 'api'], 'Path to OpenAPI specification file. JSON or YAML.')
 args.example('openapi-mock-server --api=petstore.yaml', 'To run a server serving examples from specification, simply point to a file')
 const opts = args.parse(process.argv)
 
+const mock = OpenApiMock(opts.api)
+
 if (opts.api) {
   App.all('*', (req, res, next) => {
     const content = req.headers['content-type'] || 'application/json'
     const path = req.path
     const operation = req.method.toLowerCase()
     Log.trace({path, method: operation, content_type: content}, 'http request')
-    OpenApiMock(opts.api).responses({
+    mock.responses({
       path,
       operation,
       response: '200',
