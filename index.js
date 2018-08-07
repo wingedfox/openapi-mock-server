@@ -6,7 +6,9 @@ const debug = require('debug')('openapi-mock-server')
 const chalk = require('chalk')
 
 args.option(['a', 'api'], 'Path to OpenAPI specification file. JSON or YAML.')
+args.option(['f', 'faker'], 'Use faker for examples provisioning.')
 args.example('openapi-mock-server --api=petstore.yaml', 'To run a server serving examples from specification, simply point to a file')
+args.example('openapi-mock-server --faker --api=petstore.yaml', 'To run a server and fake all responses')
 const opts = args.parse(process.argv)
 
 debug(`Reading OpenAPI in ${opts.api}`)
@@ -25,7 +27,8 @@ if (opts.api) {
       path,
       operation,
       response: '200',
-      content
+      content,
+      faker: opts.faker
     }).then(mock => {
       if (path in mock) {
         const response = mock[path][operation].responses
